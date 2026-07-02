@@ -1,3 +1,4 @@
+"use client";
 import { SiGithub, SiLinkedin, SiLeetcode } from "react-icons/si";
 import { HiMail } from "react-icons/hi";
 
@@ -20,6 +21,7 @@ export default function Footer() {
     <footer className="border-t border-[var(--card-border)] py-10 mt-20">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+
           <a href="#hero" className="text-lg font-mono font-bold gradient-text">
             TM.dev
           </a>
@@ -50,10 +52,11 @@ export default function Footer() {
               </a>
             ))}
           </div>
+
         </div>
 
         <p className="text-center text-xs text-[var(--muted)] mt-8">
-          © {new Date().getFullYear()} Tanisha Mathur. Built with Next.js,
+          &copy; {new Date().getFullYear()} Tanisha Mathur. Built with Next.js,
           Tailwind CSS &amp; Supabase.
         </p>
       </div>
