@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: #f8f7ff;
+    --foreground: #0d0d1a;
+    --accent: #7c3aed;
+    --accent-dark: #6d28d9;
+    --accent-muted: rgba(124, 58, 237, 0.1);
+    --card: #ffffff;
+    --card-border: rgba(0, 0, 0, 0.08);
+    --muted: #6b7280;
+  }
+
+  .dark {
+    --background: #0d0d1a;
+    --foreground: #f0efff;
+    --accent: #8b5cf6;
+    --accent-dark: #7c3aed;
+    --accent-muted: rgba(139, 92, 246, 0.15);
+    --card: #13131f;
+    --card-border: rgba(255, 255, 255, 0.07);
+    --muted: #9ca3af;
+  }
+
+  * {
+    scroll-behavior: smooth;
+  }
+
+  html {
+    scroll-padding-top: 80px;
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  ::selection {
+    background-color: var(--accent);
+    color: white;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--background);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--accent);
+    border-radius: 3px;
+  }
+}
+
+@layer utilities {
+  .gradient-text {
+    background: linear-gradient(135deg, #7c3aed 0%, #ec4899 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .card-hover {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+
+  .card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(124, 58, 237, 0.15);
+  }
+
+  .glass {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+}
